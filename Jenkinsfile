@@ -15,9 +15,9 @@ node {
             sh "./mvnw clean"
         }
 
-        stage('backend tests') {
+        stage('backend install') {
             try {
-                sh "./mvnw test"
+                sh "./mvnw install"
             } catch(err) {
                 throw err
             } finally {
